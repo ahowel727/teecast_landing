@@ -273,7 +273,7 @@
   .hero-web-link:hover { color: white; }
   .hero-web-link svg { width: 16px; height: 16px; }
 
-  /* Phone mockup */
+  /* Hero device */
   .hero-device {
     z-index: 2;
     display: flex;
@@ -282,181 +282,11 @@
     animation: fadeUp 0.8s ease-out 0.5s forwards;
   }
 
-  .phone-frame {
+  .hero-screenshot {
     width: 280px;
-    height: 570px;
-    background: var(--gray-900);
-    border-radius: 40px;
-    padding: 12px;
-    box-shadow:
-      0 0 0 2px rgba(255,255,255,0.1),
-      0 40px 80px rgba(0,0,0,0.3),
-      0 16px 32px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
+    border-radius: 32px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.3), 0 16px 32px rgba(0,0,0,0.2);
   }
-
-  .phone-notch {
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 28px;
-    background: var(--gray-900);
-    border-radius: 0 0 16px 16px;
-    z-index: 10;
-  }
-
-  .phone-screen {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-    background: linear-gradient(180deg, var(--green-700) 0%, var(--green-600) 20%, var(--page-bg) 20%);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mock-header {
-    background: linear-gradient(135deg, var(--green-700), var(--green-600));
-    padding: 40px 16px 14px;
-    text-align: center;
-  }
-
-  .mock-wordmark {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: -0.02em;
-  }
-  .mock-wordmark .tee { color: white; }
-  .mock-wordmark .cast { color: var(--gold); }
-  .mock-tagline { font-size: 8px; color: var(--green-200); margin-top: 2px; font-family: var(--font-body); }
-
-  .mock-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    padding: 8px 0 0;
-  }
-  .mock-tab {
-    font-family: var(--font-display);
-    font-size: 9px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.5);
-    padding-bottom: 6px;
-  }
-  .mock-tab.active {
-    color: white;
-    font-weight: 700;
-    border-bottom: 2px solid var(--gold);
-  }
-
-  .mock-body {
-    flex: 1;
-    background: var(--page-bg);
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .mock-card {
-    background: white;
-    border-radius: 12px;
-    padding: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  }
-
-  .mock-score-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .mock-course-name {
-    font-family: var(--font-display);
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--gray-900);
-  }
-  .mock-course-sub {
-    font-size: 8px;
-    color: var(--gray-500);
-    margin-top: 1px;
-    font-family: var(--font-body);
-  }
-
-  .mock-score-badge {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--green-600);
-    background: var(--green-100);
-  }
-
-  .mock-score-badge.sky { color: #0ea5e9; background: #e0f2fe; }
-
-  .mock-label { font-size: 7px; color: var(--green-600); text-align: center; margin-top: 2px; font-weight: 600; font-family: var(--font-body); }
-
-  .mock-day-row {
-    display: flex;
-    gap: 6px;
-    margin-top: 4px;
-  }
-
-  .mock-day {
-    flex: 1;
-    text-align: center;
-    padding: 6px 2px;
-    border-radius: 8px;
-    background: var(--green-50);
-    border: 1px solid var(--green-200);
-  }
-  .mock-day.active { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
-  .mock-day-label { font-size: 7px; color: var(--gray-500); font-weight: 500; font-family: var(--font-body); }
-  .mock-day-score {
-    font-family: var(--font-display);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--green-600);
-    margin-top: 1px;
-  }
-  .mock-day-score.sky { color: #0ea5e9; }
-
-  .mock-section-label {
-    font-family: var(--font-body);
-    font-size: 8px;
-    font-weight: 600;
-    color: var(--gray-700);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 4px;
-  }
-
-  .mock-window {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6px 0;
-    border-bottom: 1px solid var(--gray-100);
-  }
-  .mock-window:last-child { border-bottom: none; }
-  .mock-window-time { font-size: 9px; color: var(--gray-600); font-family: var(--font-body); }
-  .mock-window-score {
-    font-family: var(--font-display);
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--green-600);
-  }
-  .mock-window-score.sky { color: #0ea5e9; }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -926,7 +756,7 @@
   }
 
   @media (max-width: 600px) {
-    .phone-frame { width: 220px; height: 450px; }
+    .hero-screenshot { width: 220px; }
     nav { padding: 0 16px; }
     .nav-links { gap: 12px; }
     .hero { padding: 96px 16px 60px; min-height: auto; }
@@ -945,7 +775,7 @@
   }
 
   @media (max-width: 380px) {
-    .phone-frame { width: 200px; height: 410px; }
+    .hero-screenshot { width: 200px; }
     .hero-headline { font-size: 26px; }
     .badge-btn { width: 100%; justify-content: center; }
   }
@@ -1144,75 +974,7 @@
     </div>
 
     <div class="hero-device">
-      <div class="phone-frame">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="mock-header">
-            <div class="mock-wordmark"><span class="tee">Tee</span><span class="cast">Cast</span></div>
-            <div class="mock-tagline">Golf weather, done right.</div>
-            <div class="mock-tabs">
-              <span class="mock-tab active">Planning</span>
-              <span class="mock-tab">Live Wind</span>
-              <span class="mock-tab">Details</span>
-            </div>
-          </div>
-          <div class="mock-body">
-            <div class="mock-card">
-              <div class="mock-score-row">
-                <div>
-                  <div class="mock-course-name">Torrey Pines - South</div>
-                  <div class="mock-course-sub">La Jolla, CA · ☀️ 72°</div>
-                </div>
-                <div style="text-align:center;">
-                  <div class="mock-score-badge">92</div>
-                  <div class="mock-label">Excellent</div>
-                </div>
-              </div>
-            </div>
-            <div class="mock-day-row">
-              <div class="mock-day active">
-                <div class="mock-day-label">Today</div>
-                <div class="mock-day-score">92</div>
-              </div>
-              <div class="mock-day">
-                <div class="mock-day-label">Thu</div>
-                <div class="mock-day-score">88</div>
-              </div>
-              <div class="mock-day">
-                <div class="mock-day-label">Fri</div>
-                <div class="mock-day-score sky">74</div>
-              </div>
-              <div class="mock-day">
-                <div class="mock-day-label">Sat</div>
-                <div class="mock-day-score">85</div>
-              </div>
-              <div class="mock-day">
-                <div class="mock-day-label">Sun</div>
-                <div class="mock-day-score">90</div>
-              </div>
-            </div>
-            <div class="mock-card">
-              <div class="mock-section-label">Best Time to Play</div>
-              <div class="mock-window">
-                <span class="mock-window-time">★ Morning · 9 AM – 12 PM</span>
-                <span class="mock-window-score">92</span>
-              </div>
-              <div class="mock-window">
-                <span class="mock-window-time">Early · 6 – 9 AM</span>
-                <span class="mock-window-score sky">78</span>
-              </div>
-              <div class="mock-window">
-                <span class="mock-window-time">Midday · 11 AM – 2 PM</span>
-                <span class="mock-window-score">85</span>
-              </div>
-              <div class="mock-window">
-                <span class="mock-window-time">Afternoon · 2 – 5 PM</span>
-                <span class="mock-window-score sky">71</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src="planning-week-screenshot.png" alt="TeeCast Planning Week View" class="hero-screenshot">
     </div>
   </div>
 </section>
