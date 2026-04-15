@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TeeCast - Golf Weather, Done Right</title>
 <meta name="description" content="Know the wind before you tee off. TeeCast cross-references real-time data from multiple weather stations to give you one clear playability score for any golf course.">
+<meta name="apple-itunes-app" content="app-id=6761272105">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -919,7 +920,7 @@
   <ul class="nav-links">
     <li class="desktop-only"><a href="#features">Features</a></li>
     <li class="desktop-only"><a href="#how">How It Works</a></li>
-    <li><a href="https://app.teecast.co" class="nav-cta">Open App →</a></li>
+    <li><a href="https://app.teecast.co" onclick="openSmartLink(); return false;" class="nav-cta">Open App →</a></li>
   </ul>
 </nav>
 
@@ -1294,6 +1295,19 @@
 </div>
 
 <script>
+  // Smart app redirect — iOS → App Store, Android → Play Store, Desktop → Web App
+  function openSmartLink() {
+    var ua = navigator.userAgent || navigator.vendor;
+    if (/iPad|iPhone|iPod/.test(ua)) {
+      window.location.href = 'https://apps.apple.com/us/app/teecast-golf-wind-weather/id6761272105';
+    } else if (/android/i.test(ua)) {
+      // Update with real Google Play link when available
+      window.location.href = 'https://play.google.com/store/apps/details?id=co.teecast.app';
+    } else {
+      window.location.href = 'https://app.teecast.co';
+    }
+  }
+
   function openLegal(id) {
     document.getElementById(id).classList.add('active');
     document.body.style.overflow = 'hidden';
